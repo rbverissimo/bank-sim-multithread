@@ -34,7 +34,7 @@ public class Main {
         try (ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads)) {
 
             System.out.println("Initiating " + numberOfThreads + " transfer threads, each performing " + transfersPerThread + " transfers.");
-            
+
             for (int i = 0; i < numberOfThreads; i++) {
                 executor.submit(new TransferTask(bank, accountIds, transfersPerThread));
             }
